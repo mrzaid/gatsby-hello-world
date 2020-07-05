@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from '../components/Layout'
-import {graphql,useStaticQuery,StaticQuery} from 'gatsby'
+import {graphql,StaticQuery} from 'gatsby'
 export default function Home() {
   return (<Layout>
     

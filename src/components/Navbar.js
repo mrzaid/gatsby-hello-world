@@ -18,7 +18,11 @@ const Navbar = () => {
 
             </li>
             <li>
-            <Link to="/404.js">404</Link>
+            <Link to="/404">404</Link>
+
+            </li>
+            <li>
+            <Link to="/staticqueiry">static query</Link>
 
             </li>
             
