@@ -1,30 +1,24 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from '../components/Layout'
+// import React from "react"
+// import { graphql } from "gatsby"
 
 
-const StaticQuery = ({ data }) =>
-{
-return(
-    <Layout>
+// const StaticQuery = ({ data }) =>
+// <pre>
+//     {JSON.stringify(data, null, 4)}
+//     </pre>
+    
 
-<pre>
-    {JSON.stringify(data, null, 4)}
-    </pre>
-    </Layout>
-    )
-}
-export const query = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-        name
-        age
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     site {
+//       siteMetadata {
+        
+//         name
+//         age
+//       }
+//     }
+//   }
+// `
 
-export default StaticQuery
+// export default StaticQuery
 
