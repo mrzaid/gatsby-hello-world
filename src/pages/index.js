@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from '../components/Layout'
-import {graphql,useStaticQuery, StaticQuery} from 'gatsby'
+import {graphql,useStaticQuery,StaticQuery} from 'gatsby'
 export default function Home() {
   return (<Layout>
     
@@ -12,18 +12,31 @@ export default function Home() {
 we are children we would be available
  in  layout destructure us please 
         </h4>
-    {/* <StaticQuery query={siteQuery} /> */}
+    <StaticQuery query={siteQuery} render={data=>data.site.siteMetadata.map((data)=>
+     <ul> 
+       <li>
+        {data.age}
+      </li>
+      <li>
+        {data.name}
+      </li>
+      <li>
+        {data.title}
+      </li>
+      </ul>
+
+    )} />
     </Layout>
   )}
-// const siteQuery = graphql`
-// query siteQuery {
-//   site {
-//     siteMetadata {
-//       age
-//       name
-//       title
-//     }
-//   }
-// }
+const siteQuery = graphql`
+query siteQuery {
+  site {
+    siteMetadata {
+      age
+      name
+      title
+    }
+  }
+}
 
-// `
+`
